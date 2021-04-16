@@ -19,7 +19,6 @@ nav {
 }
 
 
-
 /* Style the header: fixed position (always stay at the top) */
 .header {
   position: fixed;
@@ -582,6 +581,21 @@ a.href {
 .contacto {
   margin-top: 200px;
 }
+
+
+.caja {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.transform_up {
+   transform: translateY(20%);
+ }
+ 
+ .aparece {
+   opacity: 1;
+   transform: none;
+ }
 
 
 

@@ -1,11 +1,31 @@
-window.onscroll = function() {myFunction()};
-
+window.onscroll = function() {  
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+myFunction();
+
+var image = document.querySelectorAll(".caja");
+ 
+for (var i=0; i < image.length; i++) {
+
+  var altura = window.innerHeight/1.3;
+  var distancia = image[i].getBoundingClientRect().top;
+
+ image[i].classList.add("transform_up");
+
+     if (distancia <= altura ) {
+     image[i].classList.add("aparece");
+     }
+     else {
+     image[i].classList.remove("aparece");
+     }
+}
+
+
+};
 
 window.onload = function () {
   var contenedor = document.getElementById("contenedor-carga");
@@ -63,3 +83,6 @@ $( this ).on( 'click', function( event ) {
 })();
 Page.init();
 });
+
+
+
